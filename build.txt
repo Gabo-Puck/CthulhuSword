@@ -1,0 +1,3 @@
+displayName = TutorialSword
+author = Gabo
+version = 0.1
