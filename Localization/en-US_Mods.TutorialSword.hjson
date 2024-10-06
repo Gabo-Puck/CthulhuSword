@@ -2,13 +2,8 @@
 
 Items: {
 	TutorialSword: {
-		DisplayName: Tutorial Sword
-		Tooltip:
-			'''
-			Template of an item
-			Replacing this tooltip is duty 
-			It's snowing on Mt.Fuji
-			'''
+		DisplayName: Cthulhu Sword
+		Tooltip: It's gross!
 	}
 }
 

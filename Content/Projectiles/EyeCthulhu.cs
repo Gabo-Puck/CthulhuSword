@@ -27,8 +27,8 @@ namespace TutorialSword.Content.Projectiles
 
         public override void SetDefaults()
         {
-            Projectile.width = 20;
-            Projectile.height = 20;
+            Projectile.width = 10;
+            Projectile.height = 10;
             Projectile.alpha = 255;
             Projectile.timeLeft = 90;
             Projectile.penetrate = 1;
@@ -36,6 +36,7 @@ namespace TutorialSword.Content.Projectiles
             Projectile.ignoreWater = true;
             Projectile.netImportant = true;
             Projectile.aiStyle = -1;
+            Projectile.damage = 10;
         }
 
         public override Color? GetAlpha(Color lightColor)
@@ -70,7 +71,7 @@ namespace TutorialSword.Content.Projectiles
             if (!PlayedSpawnSound)
             {
                 PlayedSpawnSound = true;
-                SoundEngine.PlaySound(SoundID.Item8, Projectile.position);
+                SoundEngine.PlaySound(SoundID.DD2_BetsyScream, Projectile.position);
             }
 
             Projectile.velocity *= 1.01f;
