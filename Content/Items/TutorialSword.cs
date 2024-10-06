@@ -26,7 +26,7 @@ namespace TutorialSword.Content.Items
             Item.knockBack = 6;
             Item.value = Item.buyPrice(silver: 1);
             Item.rare = ItemRarityID.Blue;
-            Item.shootSpeed = 15;
+            Item.shootSpeed = 8f;
             Item.autoReuse = true;
 
         }

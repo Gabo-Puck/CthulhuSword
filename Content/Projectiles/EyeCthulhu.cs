@@ -64,8 +64,31 @@ namespace TutorialSword.Content.Projectiles
             }
         }
 
+        private void SpawnDust()
+        {
+            if (Main.rand.NextBool(2)) // only spawn 20% of the time
+            {
+                int choice = Main.rand.Next(3); // choose a random number: 0, 1, or 2
+                if (choice == 0) // use that number to select dustID: 15, 57, or 58
+                {
+                    choice = 15;
+                }
+                else if (choice == 1)
+                {
+                    choice = 57;
+                }
+                else
+                {
+                    choice = 58;
+                }
+                // Spawn the dust
+                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, choice, Projectile.velocity.X * 0.25f, Projectile.velocity.Y * 0.25f, 150, Color.DarkRed, 0.7f);
+            }
+        }
+
         public override void AI()
         {
+            SpawnDust();
             FadeInAndOut();
             Lighting.AddLight(Projectile.Center, 0.9f, 0.1f, 0.3f);
             if (!PlayedSpawnSound)
